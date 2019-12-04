@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>#SaveForTheFuture</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="water-assets/logo.png" />
+
+</head>
+
+<body>
+    <div id="introduction" class="row mx-0">
+        <div class="col-md-7 table-display">
+            <div class="table-child">
+                <img src="water-assets/fishingman.gif" style="float: right">
+            </div>
+        </div>
+        <div class="col-md-5 table-display">
+            <div class="introduction-content table-child">
+                <p class="tagline" style="font-size:1.15rem;">Waste Water Today, Live In Desert Tomorrow</p>
+                <h1 id="counter">15,629,688</h1>
+                <p class="counter-subtitle">people have pledged to save water</p>
+                <div class="mt-5" style="max-width: 500px;">
+                    <p class="counter-subtitle">I will pledge too!</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Your Name!"
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Your Email!"
+                               aria-label="Recipient's email" aria-describedby="button-addon2"> 
+                        </div>
+
+                    <div>
+                        <input type="checkbox" class="form-check-label" name="anonymous" value="anonymous" disabled> Hide my Name! </br>
+                        <button class="btn btn-dark" type="button" id="button-addon2" style="margin-top:1rem;">Pledge!</button>
+                    </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/countUp.js"></script>
+<script>
+    const counter = document.querySelector('#counter');
+    const countUp = new CountUp(counter, 0, 15629688);
+    if (!countUp.error) {
+        countUp.start();
+    } else {
+        console.error(countUp.error);
+    }
+</script>
+
+</html>
