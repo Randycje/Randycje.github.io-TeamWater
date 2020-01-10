@@ -4,6 +4,7 @@
 
 .table-display {
   display: table;
+  width: 100%;
 }
 
 .table-child {
@@ -28,7 +29,7 @@
   font-weight: 800;
   color: #273654;
   font-size: 70px;
-  width: 370px;
+  width: 280px;
 }
 
 .counter-subtitle {
@@ -56,4 +57,46 @@ a:hover {
 }
 .bg-blue {
   background-color: #51a7a8;
+}
+.bg-grey {
+  background-color: #ececec;
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+.pledge-card {
+  width: 300px;
+}
+.footer-link {
+  color: black !important;
+}
+.footer-link:hover {
+  color: 51a7a8 !important;
+  font-weight: 400;
+}
+@media (max-width: 1024px) {
+  #intro-gif {
+    display: none;
+  }
+
+  .tagline.font-weight-bold {
+    text-align: center;
+  }
+
+  #pledges-list > div:nth-child(n + 7) {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    #pledges-list > div:nth-child(n + 6) {
+      display: none;
+    }
+  }
+}
+
+#eapps-instagram-feed-1 > a,
+.eapps-remove-link {
+  display: none;
 }
