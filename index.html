@@ -334,12 +334,12 @@
     });
 
     incrementPledges = () => {
+        countUp.update(pledges += 1);
         Swal.fire({
             icon: 'success',
             title: 'Pledged',
             text: 'Thanks for participating!'
         })
-        countUp.update(pledges += 1);
     }
 </script>
 
