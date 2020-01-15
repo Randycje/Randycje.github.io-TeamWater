@@ -64,8 +64,12 @@
                                     </div>
 
                                     <div>
-                                        <button class="btn btn-dark mt-3 w-100" type="button"
-                                            onclick="incrementPledges()">Pledge!</button>
+                                        <button class="btn btn-dark mt-3 w-100" type="button" onclick="countUp.update(pledges += 1);
+                                            Swal.fire({
+                                                icon: 'success',
+                                                title: 'Pledged',
+                                                text: 'Thanks for participating!'
+                                            });">Pledge!</button>
                                     </div>
                                 </div>
                             </div>
@@ -339,7 +343,7 @@
             icon: 'success',
             title: 'Pledged',
             text: 'Thanks for participating!'
-        })
+        });
     }
 </script>
 
