@@ -17,8 +17,22 @@
 
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="water-assets/fullpage.min.css" />
+    <link rel="stylesheet" href="water-assets/loaders.min.css" />
     <link rel="icon" type="image/png" href="water-assets/logo.png" />
 
+    <style>
+        @media (max-width: 1024px) {
+            #pledges-list>div:nth-child(n + 7) {
+                display: none;
+            }
+
+            @media (max-width: 768px) {
+                #pledges-list>div:nth-child(n + 6) {
+                    display: none;
+                }
+            }
+        }
+    </style>
     <title>#Save4TheFutureNow</title>
 </head>
 
@@ -40,7 +54,7 @@
                             <div class="p-4">
                                 <div id="counter-container"
                                     class="d-flex justify-content-lg-start justify-content-md-center">
-                                    <h1 id="counter">50,688</h1>
+                                    <h1 id="counter"></h1>
                                     <p class="counter-subtitle" style="line-height: 61px;">pledges</p>
                                 </div>
                                 <div class="mt-1">
@@ -48,17 +62,12 @@
                                         Waste Water Today, Live In Desert Tomorrow
                                     </p>
                                     <p class="counter-subtitle mt-5">I will pledge too!</p>
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Your Name"
-                                            aria-label="Recipient's username" aria-describedby="button-addon2" required>
-                                    </div>
-                                    <div class="input-group mb-3">
-                                        <input type="email" class="form-control" placeholder="Your Email"
-                                            aria-label="Recipient's email" aria-describedby="button-addon2" required>
-                                    </div>
 
-                                    <div>
-                                        <button class="btn btn-dark mt-3 w-100" type="button"
+                                    <div class="input-group mb-3">
+                                        <input id="pledgerName" type="text" class="form-control"
+                                            placeholder="Enter your name or leave blank for 'Anonymous'"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2" required>
+                                        <button class="btn btn-dark" type="button"
                                             onclick="incrementPledges()">Pledge!</button>
                                     </div>
                                 </div>
@@ -69,172 +78,22 @@
             </div>
         </div>
 
-        <div class=" section">
+        <div class="section">
             <div class="container h-100 pb-3">
                 <div class="row justify-content-center pt-3">
                     <h1 id="pledge-title">Recent Pledges</h1>
                 </div>
-                <div id="pledges-list" class="row no-gutters justify-content-center">
-                    <!-- Top 5 -->
-                    <div class="col-lg-4 col-md-12 col-sm-12 no-gutters justify-content-center pledge-card">
-                        <div class="media p-2">
-                            <img class="icon donor mr-4" src="water-assets/pledges-icons/river.png" alt="icon"
-                                height="100">
-                            <div class="media-body p-2 mb-0 border-bottom border-top border-gray w-100">
-                                <strong>Jotaro Kujo</strong>
-                                <span class="feed-datetime d-block text-muted small my-1">12/4/2019,
-                                    11:23:40 AM</span>
-                                <span class="d-block medium mb-0">Pledged to save
-                                    water!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12 no-gutters justify-content-center pledge-card">
-                        <div class="media p-2">
-                            <img class="icon donor mr-4" src="water-assets/pledges-icons/river.png" alt="icon"
-                                height="100">
-                            <div class="media-body p-2 mb-0 border-bottom border-top border-gray w-100">
-                                <strong>Dio Brando</strong>
-                                <span class="feed-datetime d-block text-muted small my-1">12/4/2019,
-                                    11:23:40 AM</span>
-                                <span class="d-block medium mb-0">Pledged to save
-                                    water!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12 no-gutters justify-content-center pledge-card">
-                        <div class="media p-2">
-                            <img class="icon donor mr-4" src="water-assets/pledges-icons/river.png" alt="icon"
-                                height="100">
-                            <div class="media-body p-2 mb-0 border-bottom border-top border-gray w-100">
-                                <strong>Jonathan Joestar</strong>
-                                <span class="feed-datetime d-block text-muted small my-1">12/4/2019,
-                                    11:23:40 AM</span>
-                                <span class="d-block medium mb-0">Pledged to save
-                                    water!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12 no-gutters justify-content-center pledge-card">
-                        <div class="media p-2">
-                            <img class="icon donor mr-4" src="water-assets/pledges-icons/river.png" alt="icon"
-                                height="100">
-                            <div class="media-body p-2 mb-0 border-bottom border-top border-gray w-100">
-                                <strong>Joseph Joestar</strong>
-                                <span class="feed-datetime d-block text-muted small my-1">12/4/2019,
-                                    11:23:40 AM</span>
-                                <span class="d-block medium mb-0">Pledged to save
-                                    water!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12 no-gutters justify-content-center pledge-card">
-                        <div class="media p-2">
-                            <img class="icon donor mr-4" src="water-assets/pledges-icons/waterfall.png" alt="icon"
-                                height="100">
-                            <div class="media-body p-2 mb-0 border-bottom border-top border-gray w-100">
-                                <strong>Giorno Giovanna</strong>
-                                <span class="feed-datetime d-block text-muted small my-1">12/4/2019,
-                                    11:23:40 AM</span>
-                                <span class="d-block medium mb-0">Pledged to save
-                                    water!</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Last 7 -->
-                    <div class="col-lg-4 col-md-12 col-sm-12 no-gutters justify-content-center pledge-card">
-                        <div class="media p-2">
-                            <img class="icon donor mr-4" src="water-assets/pledges-icons/waterfall.png" alt="icon"
-                                height="100">
-                            <div class="media-body p-2 mb-0 border-bottom border-top border-gray w-100">
-                                <strong>Mohammed Avdol</strong>
-                                <span class="feed-datetime d-block text-muted small my-1">12/4/2019,
-                                    11:23:40 AM</span>
-                                <span class="d-block medium mb-0">Pledged to save
-                                    water!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12 no-gutters justify-content-center pledge-card">
-                        <div class="media p-2">
-                            <img class="icon donor mr-4" src="water-assets/pledges-icons/waterfall.png" alt="icon"
-                                height="100">
-                            <div class="media-body p-2 mb-0 border-bottom border-top border-gray w-100">
-                                <strong>Noriaki Kakyoin</strong>
-                                <span class="feed-datetime d-block text-muted small my-1">12/4/2019,
-                                    11:23:40 AM</span>
-                                <span class="d-block medium mb-0">Pledged to save
-                                    water!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12 no-gutters justify-content-center pledge-card">
-                        <div class="media p-2">
-                            <img class="icon donor mr-4" src="water-assets/pledges-icons/waterfall.png" alt="icon"
-                                height="100">
-                            <div class="media-body p-2 mb-0 border-bottom border-top border-gray w-100">
-                                <strong>Jean Pierre Polnareff</strong>
-                                <span class="feed-datetime d-block text-muted small my-1">12/4/2019,
-                                    11:23:40 AM</span>
-                                <span class="d-block medium mb-0">Pledged to save
-                                    water!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12 no-gutters justify-content-center pledge-card">
-                        <div class="media p-2">
-                            <img class="icon donor mr-4" src="water-assets/pledges-icons/mountains.png" alt="icon"
-                                height="100">
-                            <div class="media-body p-2 mb-0 border-bottom border-top border-gray w-100">
-                                <strong>Iggy</strong>
-                                <span class="feed-datetime d-block text-muted small my-1">12/4/2019,
-                                    11:23:40 AM</span>
-                                <span class="d-block medium mb-0">Pledged to save
-                                    water!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12 no-gutters justify-content-center pledge-card">
-                        <div class="media p-2">
-                            <img class="icon donor mr-4" src="water-assets/pledges-icons/mountains.png" alt="icon"
-                                height="100">
-                            <div class="media-body p-2 mb-0 border-bottom border-top border-gray w-100">
-                                <strong>Hol Horse</strong>
-                                <span class="feed-datetime d-block text-muted small my-1">12/4/2019,
-                                    11:23:40 AM</span>
-                                <span class="d-block medium mb-0">Pledged to save
-                                    water!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12 no-gutters justify-content-center pledge-card">
-                        <div class="media p-2">
-                            <img class="icon donor mr-4" src="water-assets/pledges-icons/mountains.png" alt="icon"
-                                height="100">
-                            <div class="media-body p-2 mb-0 border-bottom border-top border-gray w-100">
-                                <strong>Josuke Higashikata</strong>
-                                <span class="feed-datetime d-block text-muted small my-1">12/4/2019,
-                                    11:23:40 AM</span>
-                                <span class="d-block medium mb-0">Pledged to save
-                                    water!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12 no-gutters justify-content-center pledge-card">
-                        <div class="media p-2">
-                            <img class="icon donor mr-4" src="water-assets/pledges-icons/mountains.png" alt="icon"
-                                height="100">
-                            <div class="media-body p-2 mb-0 border-bottom border-top border-gray w-100">
-                                <strong>Yoshikage Kira</strong>
-                                <span class="feed-datetime d-block text-muted small my-1">12/4/2019,
-                                    11:23:40 AM</span>
-                                <span class="d-block medium mb-0">Pledged to save
-                                    water!</span>
-                            </div>
-                        </div>
+                <div id="landing-loading" class="loader text-center mt-5">
+                    <div class="ball-pulse">
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
                 </div>
+                <div id="pledges-list" class="row no-gutters justify-content-center">
+                </div>
+                <div class="text-center mt-4"><a href="/pledges.html">Click here to view all
+                        pledges</a></div>
             </div>
         </div>
 
@@ -322,35 +181,97 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
 <script>
-    let pledges = 50688;
-
-    const counter = document.querySelector('#counter');
-    const countUp = new CountUp(counter, 0, pledges, 0, 0.6);
-
-    if (!countUp.error) {
-        countUp.start()
-    } else {
-        console.error(countUp.error)
-    }
-
     new fullpage('#fullpage', {
-        //options here
         autoScrolling: true,
         scrollHorizontally: true,
         navigation: true,
         navigationPosition: "right",
         scrollOverflow: true,
+        loopBottom: true,
     });
 
+    appendLeadingZeroes = (n) => {
+        if (n <= 9) {
+            return "0" + n;
+        }
+        return n
+    }
+
     incrementPledges = () => {
-        countUp.update(pledges += 1);
+        countUp.update(pledgesCounter += 1);
         Swal.fire({
             icon: 'success',
             title: 'Pledged',
             text: 'Thanks for participating!',
             allowOutsideClick: false,
         }).then(() => Swal.close());
+        postToJsonBin();
     }
+
+    insertColumns = () => {
+        let pledgeList = document.getElementById("pledges-list");
+        const images = ["river.png", "waterfall.png", "mountains.png"];
+
+        createColumn = (name, date) => {
+            let index = [Math.floor(Math.random() * images.length)];
+
+            return ("<div class='col-lg-4 col-md-12 col-sm-12 no-gutters justify-content-center pledge-card'><div class='media p-2'><img class='icon donor mr-4' src='water-assets/pledges-icons/" + images[index] + "' alt='icon' height='100'> <div class='media-body p-2 mb-0 border-bottom border-top border-gray w-100'><strong class='text-capitalize'>" + name + "</strong><span class='feed-datetime d-block text-muted small my-1'>" + date + "</span><span class='d-block medium mb-0'>Pledged to save water!</span></div></div></div>")
+        };
+
+        let top12Pledges = pledges.slice(-12).reverse()
+        pledgeList.innerHTML = "";
+        top12Pledges.map(pledge => (pledgeList.innerHTML += createColumn(pledge.name, pledge.date)));
+    }
+
+    // For Posting
+    postToJsonBin = () => {
+        let current_datetime = new Date()
+        let formatted_date = current_datetime.getFullYear() + "-" + appendLeadingZeroes(current_datetime.getMonth() + 1) + "-" + appendLeadingZeroes(current_datetime.getDate()) + " " + appendLeadingZeroes(current_datetime.getHours()) + ":" + appendLeadingZeroes(current_datetime.getMinutes()) + ":" + appendLeadingZeroes(current_datetime.getSeconds())
+        let pledgerName = document.getElementById("pledgerName").value;
+
+        let req = new XMLHttpRequest();
+
+        if (document.getElementById('pledgerName').value === "") {
+            pledgerName = "Anonymous"
+        }
+
+        req.onreadystatechange = () => {
+            if (req.readyState == XMLHttpRequest.DONE) {
+                // Pass
+            }
+        };
+        req.open("PUT", "https://api.jsonbin.io/b/5e1f46035df640720835ed12", false);
+        req.setRequestHeader("Content-type", "application/json");
+        pledges.push({ "name": pledgerName, "date": formatted_date })
+        req.send(JSON.stringify(pledges));
+        insertColumns();
+    }
+
+    let pledges = [];
+    let pledgesCounter = 0;
+    const countUp = new CountUp(counter, 0, 0, 0, 0.6);
+
+    fetch("https://api.jsonbin.io/b/5e1f46035df640720835ed12/latest")
+        .then(res => res.json())
+        .then(data => pledges = data)
+        .then(() => insertColumns())
+        .then(() => $('#landing-loading').hide())
+        .then(() => pledgesCounter = pledges.length)
+        .then(() => startCount())
+        .catch((err) => console.log(err));
+
+
+    startCount = () => {
+        const counter = document.querySelector('#counter');
+        const countUp = new CountUp(counter, 0, pledgesCounter, 0, 0.6);
+        if (!countUp.error) {
+            countUp.start()
+        } else {
+            console.error(countUp.error)
+        }
+    }
+
+
 </script>
 
 </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:image" content="http://Save4TheFutureNow.com/water-assets/logo.png">
+    <meta property="og:site_name" content="Save4TheFuture" />
+    <meta property="og:title" content="Save4TheFuture" />
+    <meta property="og:url" content="http://Save4TheFutureNow.com/">
+    <meta name="description" content="Save4TheFuture is an initiative to start saving water.">
+    <meta name="keywords" content="PUB, water, saving, conservation, future, saving water, NYP, nanyang polytechnic">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="water-assets/fullpage.min.css" />
+    <link rel="stylesheet" href="water-assets/loaders.min.css" />
+    <link rel="icon" type="image/png" href="water-assets/logo.png" />
+    <title>#Save4TheFutureNow</title>
+</head>
+
+<body>
+    <div>
+        <h1 class="text-center my-5">Our Most Recent Pledges</h1>
+        <div id="loading" class="loader">
+            <div id="loading-image" class="ball-pulse">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="text-center mt-3"><a href="/index.html">Click to go back</a></div>
+
+        <div class="container-fluid">
+            <div id="pledges-list" class="row no-gutters justify-content-md-start justify-content-sm-center">
+            </div>
+
+        </div>
+    </div>
+</body>
+<!-- Dependencies for Javascript Events -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<script src="water-assets/loaders.css.js"></script>
+
+<script>
+    let pledges = [];
+    fetch("https://api.jsonbin.io/b/5e1f46035df640720835ed12/latest")
+        .then(res => res.json())
+        .then(data => pledges = data.reverse())
+        .then(() => insertColumns())
+        .then(() => $('#loading').hide());
+
+    let pledgeList = document.getElementById("pledges-list");
+
+    createColumn = (name, date) => {
+        return ("<div class='col-lg-2 col-md-4 col-sm-12 pledge-card text-center'><div class='media p-2'><div class='media-body p-2 mb-0 border-bottom border-top border-gray text-truncate'> <strong class='text-capitalize'>" + name + "</strong><span class='feed-datetime d-block text-muted small my-1'>" + date + "</span><span class='d-block medium mb-0'>Pledged to save water!</span></div></div></div > ")
+    };
+
+    insertColumns = () => {
+        pledges.map(pledge => (pledgeList.innerHTML += createColumn(pledge.name, pledge.date)));
+    }
+</script>
+
+</html>
