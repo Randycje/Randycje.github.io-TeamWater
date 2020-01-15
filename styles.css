@@ -55,10 +55,6 @@ a:hover {
   text-decoration: none;
 }
 
-.h-100 {
-  min-height: 100vh;
-  height: 100%;
-}
 .bg-blue {
   background-color: #51a7a8;
 }
