@@ -100,6 +100,32 @@ a:link {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.pledge-card {
+  background: white;
+}
+#goToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 60px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  width: 40px;
+  padding: 5px;
+  object-fit: cover;
+  border: 1px solid #4169e1;
+  border-radius: 50%;
+  background-color: #4169e1;
+}
+
+#fisher-man {
+  width: 100%;
+  max-width: 700px;
+}
+
 @media (max-width: 1024px) {
   #intro-gif {
     display: none;
@@ -133,6 +159,9 @@ a:link {
     }
     #instagram-container {
       display: none;
+    }
+    #goToTopBtn {
+      right: 45px;
     }
   }
 }

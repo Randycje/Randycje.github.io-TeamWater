@@ -20,11 +20,23 @@
     <link rel="stylesheet" href="water-assets/loaders.min.css" />
     <link rel="icon" type="image/png" href="water-assets/logo.png" />
     <title>#Save4TheFutureNow</title>
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="p-3">
-        <h1 class="text-center text-dark my-5">Our Most Recent Pledges</h1>
+    <div class="p-3 bg-blue" style="min-height: 100vh; position: relative; z-index: 2;">
+        <img src="water-assets/up-arrow.png" onclick="topFunction()" id="goToTopBtn" />
+
+        <h1 class="text-center text-white mt-5">Our Pledges</h1>
+        <p class="text-center text-white">Thank you all for participating in this journey!</p>
         <div id="loading" class="loader">
             <div id="loading-image" class="ball-pulse">
                 <div></div>
@@ -32,14 +44,24 @@
                 <div></div>
             </div>
         </div>
-
-        <div class="text-center mt-3"><a href="/index.html">Click to go back</a></div>
-
-        <div class="container-fluid">
+        <div class="text-center"><a class="text-white" href="/index.html">Click to go back</a></div>
+        <div class="container">
             <div id="pledges-list" class="row no-gutters justify-content-md-start justify-content-sm-center">
             </div>
-
+            <p class="text-center">
+                <img id="fisher-man" src="water-assets/fishingman.gif"></p>
         </div>
+
+        <div class="row no-gutters justify-content-center text-white">
+            <div class="col-md-12 text-center mt-5">
+                <p style="font-size: 12px">Copyright &COPY; Save4TheFuture. Contact Us
+                    <a href="mailto:save4thefuture00@gmail.com">
+                        <u>Here</u>.</a>
+                    <br />R² &COPY; Rx and Rez.
+                </p>
+            </div>
+        </div>
+
     </div>
 </body>
 <!-- Dependencies for Javascript Events -->
@@ -65,11 +87,25 @@
     let pledgeList = document.getElementById("pledges-list");
 
     createColumn = (name, date) => {
-        return ("<div class='col-lg-2 col-md-4 col-sm-12 pledge-card text-center'><div class='media p-2'><div class='media-body p-2 mb-0 border-bottom border-top border-gray text-truncate'> <strong class='text-capitalize'>" + name + "</strong><span class='feed-datetime d-block text-muted small my-1'>" + date + "</span><span class='d-block medium mb-0'>Pledged to save water!</span></div></div></div > ")
+        return ("<div class='col-lg-4 col-md-6 col-sm-12 text-center'><div class='media p-2'><div class='media-body p-3 mb-0 border border-gray text-truncate pledge-card shadow-sm'> <strong class='text-capitalize'><h5>" + name + "</h5></strong><span class='feed-datetime d-block text-muted small my-1'>" + date + "</span><span class='d-block mb-0'>Pledged to save water!</span></div></div></div>")
     };
 
     insertColumns = () => {
         pledges.map(pledge => (pledgeList.innerHTML += createColumn(pledge.name, pledge.date)));
+    }
+
+    goToTopBtn = document.getElementById("goToTopBtn");
+    window.onscroll = function () { scrollFunction() };
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            goToTopBtn.style.display = "block";
+        } else {
+            goToTopBtn.style.display = "none";
+        }
+    }
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
 </script>
 
