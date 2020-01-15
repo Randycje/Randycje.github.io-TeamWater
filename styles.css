@@ -135,6 +135,18 @@ a:link {
   .counter-subtitle {
     text-align: center;
   }
+  #product-container {
+    height: 100%;
+    text-align: center;
+  }
+  #product-img {
+    max-height: 500px;
+    width: 100%;
+    object-fit: contain;
+  }
+  #product-tag .table-child {
+    height: 20%;
+  }
 
   @media (max-width: 768px) {
     #counter-container {

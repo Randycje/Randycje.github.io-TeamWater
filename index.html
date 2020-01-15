@@ -41,14 +41,15 @@
     <div id="fullpage">
         <div class="section">
             <div id="introduction" class="row no-gutters justify-content-center">
-                <div id="intro-gif" class="col-md-5">
+                <div id="intro-gif" class="col-md-4">
                     <div class="table-display">
                         <div class="table-child">
-                            <img src="water-assets/fishingman.gif" class="w-100">
+                            <img src="water-assets/fishingman.gif" class="w-100"
+                                style="max-height: 900px; object-fit: contain;">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12">
+                <div class=" col-lg-4 col-md-12">
                     <div class="table-display">
                         <div class="table-child">
                             <div class="p-3">
@@ -63,11 +64,11 @@
                                     </p>
                                     <p class="counter-subtitle mt-5">I will pledge too!</p>
 
-                                    <div class="input-group mb-3">
-                                        <input id="pledgerName" type="text" class="form-control"
+                                    <div class="input-group mb-3 px-sm-5 px-lg-0">
+                                        <input id="pledgerName" type="text" class="form-control rounded-0"
                                             placeholder="Enter your name or leave blank for 'Anonymous'"
                                             aria-label="Recipient's username" aria-describedby="button-addon2" required>
-                                        <button class="btn btn-dark" type="button"
+                                        <button class="btn btn-dark rounded-0" type="button"
                                             onclick="incrementPledges()">Pledge!</button>
                                     </div>
                                 </div>
@@ -98,11 +99,34 @@
         </div>
 
         <div class="section">
+            <div id="product-container" class="row no-gutters justify-content-center"
+                style="background-color: #ececec;">
+                <div class="col-md-4 col-sm-12">
+                    <img id="product-img" src="water-assets/products/product-2.png" class="w-100" alt="Hat and Shirt">
+                </div>
+
+                <div id="product-tag" class="col-lg-4 col-md-12">
+                    <div class="table-display">
+                        <div class="table-child">
+                            <div class="p-3">
+                                <h1> New Products In</h1>
+                                <p class="tagline font-weight-bold" style="font-size: 1rem;">
+                                    For each purchase, 10% of the sale will go towards water conservation.
+                                </p>
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
             <div class="row no-gutters justify-content-center bg-blue">
                 <div class="col-lg-5 col-md-12">
                     <div class="table-display w-100">
                         <div class="table-child text-center">
-                            <h1 class="mt-3" id="connect-with-us">Connect with us!</h1>
+                            <h1 class="mt-3 text-white" id="connect-with-us">Connect with us!</h1>
                             <div style="margin-bottom:5%;">
                                 <a href="https://www.instagram.com/save4thefuturenow/" target="_blank"
                                     class="text-white a-link ">Instagram</a>
@@ -120,10 +144,18 @@
                                 </div> -->
 
                                 <div class="col-md-12">
-                                    <iframe
-                                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsave4thefuture&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=909302709403209"
-                                        width="340" height="500" style="border:none;overflow:hidden" scrolling="no"
-                                        frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                                    <div id="fb-root"></div>
+                                    <script async defer crossorigin="anonymous"
+                                        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v5.0&appId=473213440257555&autoLogAppEvents=1"></script>
+                                    <div class="fb-page" data-href="https://www.facebook.com/save4thefuture/"
+                                        data-tabs="timeline" data-width="450" data-height="" data-small-header="false"
+                                        data-adapt-container-width="true" data-hide-cover="false"
+                                        data-show-facepile="true">
+                                        <blockquote cite="https://www.facebook.com/save4thefuture/"
+                                            class="fb-xfbml-parse-ignore"><a
+                                                href="https://www.facebook.com/save4thefuture/">Save4TheFuture</a>
+                                        </blockquote>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -190,7 +222,7 @@
         scrollOverflow: true,
         loopBottom: true,
         fitToSection: false,
-        sectionsColor: ['#51a7a8', '#FFFFFF', '#51a7a8', '#FFFFFF'],
+        sectionsColor: ['#51a7a8', '#FFFFFF', '#51a7a8', '#51a7a8', '#FFFFFF'],
     });
 
     appendLeadingZeroes = (n) => {
