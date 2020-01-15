@@ -29,7 +29,7 @@
   font-weight: 800;
   color: #273654;
   font-size: 70px;
-  width: 280px;
+  width: 240px;
 }
 
 .counter-subtitle {
@@ -44,6 +44,10 @@
 }
 .pledge-button {
   margin-top: 100px;
+}
+#pledge-title,
+#pledges-list {
+  margin-top: 50px !important;
 }
 a:hover {
   color: #273654 !important;
@@ -73,9 +77,24 @@ a:link {
   color: black !important;
 }
 .footer-link:hover {
-  color: 51a7a8 !important;
+  color: #51a7a8 !important;
   font-weight: 400;
 }
+
+.a-link {
+  color: white !important;
+}
+.a-link:hover {
+  color: black !important;
+  font-weight: 400;
+}
+
+#instagram-container {
+  height: 505px;
+  overflow-y: hidden;
+  margin-bottom: 20px;
+}
+
 @media (max-width: 1024px) {
   #intro-gif {
     display: none;
@@ -90,13 +109,30 @@ a:link {
   }
 
   @media (max-width: 768px) {
+    #counter-container {
+      text-align: center;
+      flex-flow: column;
+    }
+
+    #counter {
+      margin: 0 auto;
+    }
+
+    #pledge-title,
+    #pledges-list {
+      margin-top: 0px !important;
+    }
+
     #pledges-list > div:nth-child(n + 6) {
       display: none;
     }
-  }
-}
 
-#eapps-instagram-feed-1 > a,
-.eapps-remove-link {
-  display: none;
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
 }
