@@ -64,8 +64,8 @@
                                     </div>
 
                                     <div>
-                                        <a id="increment-button" href="#" role="button" class="btn btn-dark mt-3 w-100"
-                                            onclick="incrementPledges()">Pledge!</a>
+                                        <button class="btn btn-dark mt-3 w-100" type="button"
+                                            onclick="incrementPledges()">Pledge!</button>
                                     </div>
                                 </div>
                             </div>
@@ -354,9 +354,8 @@
             icon: 'success',
             title: 'Pledged',
             text: 'Thanks for participating!',
-            allowOutsideClick: true,
-            closeOnClickOutside: false,
-        }).then(() => Swal.close())
+            allowOutsideClick: false,
+        }).then(() => Swal.close());
     }
 </script>
 
