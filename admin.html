@@ -62,8 +62,8 @@
 
 </head>
 
-<body>
-    <div class="row no-gutters justify-content-lg-around justify-content-md-center p-3">
+<body onload="validateUser()">
+    <div id="mainBody" class="row no-gutters justify-content-lg-around justify-content-md-center p-3">
         <div class="col-lg-3 col-md-4 col-sm-12">
             <h1 class="text-center">Database Editor</h1>
             <hr>
@@ -182,7 +182,16 @@
         })
     }
 
-    loadPledges();
+    validateUser = () => {
+        let auth = prompt("ENTER PASSWORD", "");
+        if (auth == "a123a123A") {
+            loadPledges();
+            return true;
+        } else {
+            window.alert("INVALID PASSWORD. REDIRECTING OUT.");
+            window.location = "https://save4thefuturenow.com";
+        }
+    }
 </script>
 
 </html>
