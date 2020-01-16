@@ -156,7 +156,7 @@
         };
         req.open("PUT", "https://api.jsonbin.io/b/5e1f46035df640720835ed12", false);
         req.setRequestHeader("Content-type", "application/json");
-        req.send(JSON.stringify(pledges.reverse()));
+        req.send(JSON.stringify(pledges));
         insertColumns();
     }
 

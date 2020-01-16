@@ -212,6 +212,7 @@
 <script src="water-assets/fullpage.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/countUp.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="water-assets/badwords.js"></script>
 
 <script>
     new fullpage('#fullpage', {
@@ -233,14 +234,24 @@
     }
 
     incrementPledges = () => {
-        countUp.update(pledgesCounter += 1);
-        Swal.fire({
-            icon: 'success',
-            title: 'Pledged',
-            text: 'Thanks for participating!',
-            allowOutsideClick: false,
-        }).then(() => Swal.close());
-        postToJsonBin();
+        if (bad_words.includes(document.getElementById("pledgerName").value)) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid Input',
+                text: 'Please refrain from profanities!',
+                allowOutsideClick: false,
+            })
+        }
+        else {
+            countUp.update(pledgesCounter += 1);
+            Swal.fire({
+                icon: 'success',
+                title: 'Pledged',
+                text: 'Thanks for participating!',
+                allowOutsideClick: false,
+            }).then(() => Swal.close());
+            postToJsonBin();
+        }
     }
 
     insertColumns = () => {
@@ -285,6 +296,7 @@
     let pledges = [];
     let pledgesCounter = 0;
     const countUp = new CountUp(counter, 0, 0, 0, 0.6);
+    const bad_words = badWords.words;
 
     fetch("https://api.jsonbin.io/b/5e1f46035df640720835ed12/latest")
         .then(res => res.json())
