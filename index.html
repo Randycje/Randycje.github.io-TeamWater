@@ -43,14 +43,15 @@
         <div class="section">
             <div id="introduction" class="row no-gutters justify-content-center">
                 <div class="table-display">
-                    <div class="table-child">
+                    <div class="table-child" style="height: 100vh;">
                         <div class="row justify-content-lg-end">
                             <div id="intro-gif" class="col-md-4">
                                 <img src="water-assets/water-intro.gif" alt="" class="img-fluid">
                             </div>
                             <div class="col-lg-6 col-md-12">
                                 <div class="pledges-border">
-                                    <div id=" counter-container" class="d-flex  justify-content-md-start">
+                                    <div id=" counter-container"
+                                        class="d-flex justify-content-lg-start justify-content-md-center">
                                         <h1 id="counter"></h1>
                                         <p class="counter-subtitle" style="line-height: 61px;">pledges</p>
                                     </div>
@@ -70,14 +71,15 @@
                                                 Make my choice
                                             </button>
                                         </div>
-                                        <img id="intro-image" src="water-assets/firm/firm-thumbsup.png"
-                                            class="img-fluid" />
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <img id="intro-image" src="water-assets/firm/firm-thumbsup.png" class="img-fluid" />
             </div>
         </div>
 
@@ -102,9 +104,9 @@
 
 
         <div class="section">
-            <div class="row no-gutters justify-content-start bg-blue">
-                <div class="col-md-3 d-sm-none d-md-block"></div>
-                <div class="col-md-3 fs-18">
+            <div class="row no-gutters justify-content-lg-start justify-content-md-center bg-blue h-100">
+                <div class="col-md-3 d-md-none d-lg-block"></div>
+                <div class="col-lg-3 col-md-10 fs-18">
                     <div class="table-display w-100">
                         <div id="who-is-firm-content" class="table-child text-center text-dark">
                             <h1 class="mb-3" style="font-size: 50px;">Who is Firm?</h1>
@@ -130,14 +132,13 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
 
         <div class="section">
             <div class="row no-gutters justify-content-center">
                 <div class="col-md-5">
-                    <h1 class="text-center" style="margin-top: 100px;">Did you know?</h1>
+                    <h1 class="text-center" id="did-you-know">Did you know?</h1>
 
                     <div class="carousel-container">
                         <div id="carouselExampleControls" class="carousel slide carousel" data-ride="carousel">
@@ -508,11 +509,16 @@
             pledgerName = "Anonymous"
         }
 
+        if (bad_words.includes(pledgerName.toLowerCase())) {
+            pledgerName = "Anonymous"
+        }
+
         req.onreadystatechange = () => {
             if (req.readyState == XMLHttpRequest.DONE) {
                 // Pass
             }
         };
+
         req.open("PUT", "https://api.jsonbin.io/b/5e2a232d50a7fe418c52a0e9", false);
         req.setRequestHeader("Content-type", "application/json");
         pledges.push({ "pledgerName": pledgerName, "date": formatted_date, "commitments": commitments });
