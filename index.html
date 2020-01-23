@@ -23,12 +23,12 @@
 
     <style>
         @media (max-width: 1024px) {
-            #pledges-list>div:nth-child(n + 7) {
+            #pledges-list>div:nth-child(n + 4) {
                 display: none;
             }
 
             @media (max-width: 768px) {
-                #pledges-list>div:nth-child(n + 6) {
+                #pledges-list>div:nth-child(n + 5) {
                     display: none;
                 }
             }
@@ -41,9 +41,9 @@
 <body>
     <div id="fullpage">
         <div class="section">
-            <div id="introduction" class="row no-gutters justify-content-center">
+            <div id="introduction" class="row no-gutters justify-content-center h-100">
                 <div class="table-display">
-                    <div class="table-child" style="height: 100vh;">
+                    <div class="table-child">
                         <div class="row justify-content-lg-end">
                             <div id="intro-gif" class="col-md-4">
                                 <img src="water-assets/water-intro.gif" alt="" class="img-fluid">
@@ -283,7 +283,7 @@
         scrollOverflow: true,
         loopBottom: true,
         fitToSection: false,
-        sectionsColor: ['#51a7a8', '#FFFAFB', '#51a7a8', '#FFFFFF', '#51a7a8', '#FFFFFF'],
+        sectionsColor: ['#f0f0e6', 'rgb(255, 250, 251)', '#51a7a8', '#FFFFFF', '#51a7a8', '#FFFFFF'],
     });
 
     const checkBox = (int, text) => {
@@ -309,7 +309,7 @@
     ]
 
     const createSet1CheckBoxes = () => {
-        let output = "<div class='px-5'>";
+        let output = "<div class='px-3'>";
         for (let i = 0; i < set1Questions.length; i++) {
             output += checkBox(i, set1Questions[i]);
         }
@@ -318,7 +318,7 @@
     }
 
     const createSet2CheckBoxes = () => {
-        let output = "<div class='px-5'>";
+        let output = "<div class='px-3'>";
         for (let i = 0; i < set2Questions.length; i++) {
             output += checkBox(i + 6, set2Questions[i]);
         }
