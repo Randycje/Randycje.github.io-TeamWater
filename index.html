@@ -348,6 +348,7 @@
             input: 'text',
             confirmButtonText: 'Next &rarr;',
             showCancelButton: true,
+            allowOutsideClick: false,
             progressSteps: ['1', '2', '3', '4']
         }).queue([
             {
@@ -365,6 +366,7 @@
                 title: 'For my toilet and shower habits, I pledge to...',
                 text: 'choose as many as you like',
                 input: "",
+                allowOutsideClick: false,
                 html: createSet1CheckBoxes(),
                 preConfirm: () => {
                     let cb_0 = Swal.getPopup().querySelector('#cb_0').checked;
@@ -380,6 +382,7 @@
                 title: 'For my habits at home and in the kitchen, I pledge to...',
                 text: 'choose as many as you like',
                 input: "",
+                allowOutsideClick: false,
                 html: createSet2CheckBoxes(),
                 preConfirm: () => {
                     let cb_6 = Swal.getPopup().querySelector('#cb_6').checked;
