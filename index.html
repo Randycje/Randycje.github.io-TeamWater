@@ -5,29 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta property="og:image" content="http://Save4TheFutureNow.com/water-assets/logo.png">
-    <meta property="og:site_name" content="Save4TheFuture" />
-    <meta property="og:title" content="Save4TheFuture" />
-    <meta property="og:url" content="http://Save4TheFutureNow.com/">
-    <meta name="description" content="Save4TheFuture is an initiative to start saving water.">
+    <meta property="og:image" content="http://SmallHabitsBigChange.com/water-assets/logo.png">
+    <meta property="og:site_name" content="SmallHabitsBigChange" />
+    <meta property="og:title" content="SmallHabitsBigChange" />
+    <meta property="og:url" content="http://SmallHabitsBigChange.com/">
+    <meta name="description" content="SmallHabitsBigChange is an initiative to start saving water.">
     <meta name="keywords" content="PUB, water, saving, conservation, future, saving water, NYP, nanyang polytechnic">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="flip.css" />
     <link rel="stylesheet" href="water-assets/fullpage.min.css" />
     <link rel="stylesheet" href="water-assets/loaders.min.css" />
     <link rel="icon" type="image/png" href="water-assets/logo.png" />
 
     <style>
         @media (max-width: 1024px) {
-            #pledges-list > div:nth-child(n + 7) {
+            #pledges-list>div:nth-child(n + 7) {
                 display: none;
             }
 
             @media (max-width: 768px) {
-                #pledges-list > div:nth-child(n + 6) {
+                #pledges-list>div:nth-child(n + 6) {
                     display: none;
                 }
             }
@@ -41,43 +42,36 @@
     <div id="fullpage">
         <div class="section">
             <div id="introduction" class="row no-gutters justify-content-center">
-                <div id="intro-gif" class="col-md-4">
-                    <div class="table-display">
-                        <div class="table-child">
-                            <img src="water-assets/firm-wave.png" class="w-100"
-                                 style="height: 500px; object-fit: contain;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12">
-                    <div class="table-display">
-                        <div class="table-child">
-                            <div class="p-3">
-                                <div id="counter-container"
-                                     class="d-flex justify-content-lg-start justify-content-md-center">
-                                    <h1 id="counter"></h1>
-                                    <p class="counter-subtitle" style="line-height: 61px;">pledges</p>
-                                </div>
-                                <div class="mt-1">
-                                    <p class="tagline font-weight-bold" style="font-size: 1.2rem; margin-bottom:0%;">
-                                        #StayFirm
-                                    </p>
-                                    <p class="tagline font-weight-bold" style="font-size: 1rem;">
-                                        Small Habits, Big Change
-                                    </p>
-                                    <!--<p class="tagline font-weight-bold" style="font-size: 0.95rem;">
-                                        Take Action, Make a Difference, Save Water.
-                                    </p>-->
-                                    <p class="counter-subtitle mt-2">I will pledge too!</p>
+                <div class="table-display">
+                    <div class="table-child">
+                        <div class="row justify-content-lg-end">
+                            <div id="intro-gif" class="col-md-4">
+                                <img src="water-assets/water-intro.gif" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="pledges-border">
+                                    <div id=" counter-container" class="d-flex  justify-content-md-start">
+                                        <h1 id="counter"></h1>
+                                        <p class="counter-subtitle" style="line-height: 61px;">pledges</p>
+                                    </div>
+                                    <div class="mt-1">
+                                        <p class="tagline font-weight-bold"
+                                            style="font-size: 1.5rem; margin-bottom:0%;">
+                                            #StayFirm
+                                        </p>
+                                        <p class="tagline font-weight-bold" style="font-size: 1rem;">
+                                            Small Habits, Big Change
+                                        </p>
+                                        <p class="counter-subtitle mt-2">I will pledge too!</p>
 
-                                    <div class="input-group mb-3 px-sm-5 px-lg-0">
-                                        <input id="pledgerName" type="text" class="form-control rounded-0"
-                                               placeholder="Your name or blank for 'Anonymous'"
-                                               aria-label="Recipient's username" aria-describedby="button-addon2" required>
-                                        <button class="btn btn-dark rounded-0" type="button"
+                                        <div class="text-">
+                                            <button class="btn btn-dark rounded-0" type="button"
                                                 onclick="incrementPledges()">
-                                            Pledge!
-                                        </button>
+                                                Make my choice
+                                            </button>
+                                        </div>
+                                        <img id="intro-image" src="water-assets/firm/firm-thumbsup.png"
+                                            class="img-fluid" />
                                     </div>
                                 </div>
                             </div>
@@ -101,186 +95,186 @@
                 </div>
                 <div id="pledges-list" class="row no-gutters justify-content-center">
                 </div>
-                <div class="text-center text-dark my-4">
-                    <a href="/pledges">
-                        Click here to view all
-                        pledges
-                    </a>
-                </div>
+                <div class="text-center text-dark my-4"><a href="/pledges">Click here to view all
+                        pledges</a></div>
             </div>
         </div>
 
-        <!--<div class="section">
-            <div id="product-container" class="row no-gutters justify-content-center"
-                style="background-color: #ececec;">
-                <div class="col-md-4 col-sm-12">
-                    <img id="product-img" src="water-assets/products/product-2.png" class="w-100" alt="Hat and Shirt">
+
+        <div class="section">
+            <div class="row no-gutters justify-content-start bg-blue">
+                <div class="col-md-3 d-sm-none d-md-block"></div>
+                <div class="col-md-3 fs-18">
+                    <div class="table-display w-100">
+                        <div id="who-is-firm-content" class="table-child text-center text-dark">
+                            <h1 class="mb-3" style="font-size: 50px;">Who is Firm?</h1>
+                            <p>
+                                This is Firm. He is an ignorant 18 year old who unknowingly portrays bad
+                                water wasting habits. He does not turn off the tap while brushing his teeth or
+                                while shampooing his hair.
+                            </p>
+                            <p>
+                                Furthermore, Firm does not believe that making small changes in his
+                                daily life to conserve water will lead to any significant impact for
+                                water-conservation in Singapore.
+                            </p>
+
+                            <p>
+                                Join Firm on this journey to make changes in his habits by following our
+                                Instagram page
+                                <a href="https://www.instagram.com/smallhabits.bigchange/"
+                                    target="_blank"><u>here!</u></a>
+                            </p>
+                            <img id="who-is-firm" src="water-assets/firm/firm-wave.png" class="img-fluid"
+                                style="height: 650px; object-fit: cover; margin-top: 150px; margin-left: 100px;" />
+                        </div>
+                    </div>
                 </div>
 
-                <div id="product-tag" class="col-lg-4 col-md-12">
-                    <div class="table-display">
-                        <div class="table-child">
-                            <div class="p-3">
-                                <h1>Lifesaving Products</h1>
-                                <p class="tagline font-weight-bold" style="font-size: 1rem;">
-                                    For each purchase, 10% of the sale will go towards water conservation.
-                                </p>
-                                <button class="btn btn-primary mb-3">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="row no-gutters justify-content-center">
+                <div class="col-md-5">
+                    <h1 class="text-center" style="margin-top: 100px;">Did you know?</h1>
+
+                    <div class="carousel-container">
+                        <div id="carouselExampleControls" class="carousel slide carousel" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="water-assets/carousel/soaping-hand.jpeg"
+                                        alt="Soaping Hand">
+                                    <p class="text-center mt-4 fs-18"><span class="font-weight-bold">Fact
+                                            #1:<br /></span>
+                                        Soaping
+                                        your hands with the tap on, is one the most common water-wasting habits which
+                                        leads
+                                        to nearly 300 ml of water wasted
+                                    </p>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="water-assets/carousel/shower.jpeg" alt="Shower">
+                                    <p class="text-center mt-4 fs-18"><span class="font-weight-bold">Fact
+                                            #2:<br /></span>
+                                        By cutting down 5 minutes of your shower time, <br />
+                                        you can save 45 litres of water a day
+                                    </p>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="water-assets/carousel/washing-machine.jpeg"
+                                        alt="Washing Machine">
+                                    <p class="text-center mt-4 fs-18"><span class="font-weight-bold">Fact
+                                            #3:<br /></span>
+                                        That water from your washing machine, can be used for <br />
+                                        flushing, scrubbing or washing the toilet
+                                    </p>
+                                </div>
                             </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next " href="#carouselExampleControls" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>-->
+
+            <!-- <div class="row no-gutters justify-content-center">
+                 -->
+        </div>
 
         <div class="section">
-            <div class="row no-gutters justify-content-center bg-blue">
-                <div class="col-lg-5 col-md-12">
-                    <div class="table-display w-100">
-                        <div class="table-child text-center">
-                            <!--<h1 class="mt-3 text-white" id="connect-with-us">Connect with us!</h1>
-                            <div style="margin-bottom:5%;">
-                                <a href="https://www.instagram.com/stay.firm/?hl=en" target="_blank"
-                                    class="text-white a-link ">Instagram</a>
-                                · <a href="https://www.facebook.com/" target="_blank"
-                                    class="text-white a-link ">Facebook</a>
-                                · <a href="https://www.youtube.com/" target="_blank"
-                                    class="text-white a-link ">YouTube</a>
-                            </div>-->
+            <div class="row no-gutters justify-content-center">
+                <div class="col-md-12">
+                    <h1 class="text-center">Keep Up to Date With Us!</h1>
+                    <div class="row mt-5 justify-content-center">
+                        <div class="col-md-8">
+                            <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                            <div class="elfsight-app-e864b9cb-0b68-400c-9862-6358603d885e"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                            <div class="row no-gutters justify-content-md-center mt-3 p-3">
-                                <!-- <div id="instagram-container" class="col-md-5 mb-4">
-                                    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-                                    <div style="width: 340px" class="elfsight-app-88510386-0611-4bf9-8d7c-6ebbaa1abf06">
-                                    </div> -->
-                            </div>
-
-                            <div class="col-md-12">
-                                <div id="fb-root"></div>
-                                <script async defer crossorigin="anonymous"
-                                        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v5.0&appId=473213440257555&autoLogAppEvents=1"></script>
-                                <div class="fb-page" data-href="https://www.facebook.com/save4thefuture/"
-                                     data-tabs="timeline" data-width="450" data-height="" data-small-header="false"
-                                     data-adapt-container-width="true" data-hide-cover="false"
-                                     data-show-facepile="true">
-                                    <!--<blockquote cite="https://www.facebook.com/save4thefuture/"
-                                        class="fb-xfbml-parse-ignore"><a
-                                            href="https://www.facebook.com/save4thefuture/">Save4TheFuture</a>
-                                    </blockquote> -->
-                                    <h1 class="text-white mb-3">Who is Firm?</h1>
-                                    <p class="text-white" style="font-size:0.9rem;">
-                                        This is Firm. He is an ignorant 18 year old who unknowingly portrays bad water wasting habits.
-                                        He does not turn off the tap while brushing his teeth or while shampooing his hair.
-
-                                    <p class="text-white" style="font-size:0.9rem;">
-                                        Furthermore, Firm does not believe that making small changes in his daily life to conserve
-                                        water will lead to any significant impact for water-conservation in Singapore.
+        <div class="section">
+            <div class="row no-gutters justify-content-center">
+                <div id="who-we-are-firm" class="col-lg-3 col-md-8 ">
+                    <img src="water-assets/firm/firm-gotchu-2.png" class="img-fluid"
+                        style="max-height: 700px; margin-top: 50px;" />
+                </div>
+                <div class="col-lg-4 col-md-8 col-sm-10 p-3">
+                    <div class="table-display">
+                        <div class="table-child">
+                            <div class="who-we-are-container">
+                                <h1 class="text-center">Who Are We?</h1>
+                                <div class="row mt-5">
+                                    <h4>About Us</h4>
+                                    <p>
+                                        Hey everyone! We are a group of students from Nanyang Polytechnic.
+                                        We started this social movement campaign "Small Habits, Big Change" because the
+                                        majority of youths in Singapore are unaware
+                                        that the smallest of actions leads to water wastage.
                                     </p>
-
-                                    <p class="text-white" style="font-size:0.9rem;">
-                                        Join Firm on this journey to make changes in his habits by following our Instagram page
-                                        <a href="https://www.instagram.com/smallhabits.bigchange/" target="_blank" class="text-white a-link "><u>here!</u></a>
+                                </div>
+                                <div class="row mt-4">
+                                    <h4>Campaign Objectives</h4>
+                                    <p>
+                                        The objectives of our campaign are to change youth's attitudes and beliefs
+                                        towards
+                                        saving water by getting them to be more
+                                        responsible by continuing to take steps to save water even after the completion
+                                        of
+                                        the campaign.
                                     </p>
-                                    <img src="water-assets/firm-gotchu.png" height="300" />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="section">
-            <div class="row no-gutters justify-content-center">
-                <h1 class="mt-5">Did you know?</h1>
-                <div id="carouselExampleControls" class="carousel slide carousel" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block justify-content-center" src="water-assets/washing-machine.jpeg" alt="Washing Machine">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block" src="water-assets/soaping-hand.jpeg" alt="Soaping Hand">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block" src="water-assets/shower.jpeg" alt="Shower">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next " href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="section bg-blue">
-            <div class="row no-gutters justify-content-center">
-                <h1 class="text-white">Keep Up to Date With Us!</h1>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="row no-gutters justify-content-center">
-                <div class="col-lg-5 col-md-8 col-sm-10 text-center p-3">
-                    <div class="container">
-                        <h1 class="text-center">Who Are We?</h1>
-                        <div class="row mt-4">
-                            <div class="col-md-6" height="50%">
-                                <h4 class="text-center">About Us</h4>
-                                <p>
-                                    Hey everyone! We are a group of students from Nanyang Polytechnic.
-                                    We started this social movement campaign "Small Habits, Big Change" because the majority of youths in Singapore are unaware
-                                    that the smallest of actions leads to water wastage.
-                                </p>
-                            </div>
-                            <div class="col-md-6" height="50%">
-                                <h4 class="text-center">Campaign Objectives</h4>
-                                <p>
-                                    The objectives of our campaign are to change youth's attitudes and beliefs towards saving water by getting them to be more
-                                    responsible by continuing to take steps to save water even after the completion of the campaign.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="mt-4">
-                        <!--<iframe width="100%" height="400" src="https://www.youtube.com/embed/BI2Q7X4kYxU"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>-->
-                    </div>
-                </div>
-            </div>
             <div class="col-md-12 text-center mt-5">
                 <p style="font-size: 12px">
                     Copyright &COPY; SmallHabitsBigChange. Contact Us<a class="footer-link text-white"
-                                                                        href="mailto:shbigchange2020@gmail.com">
+                        href="mailto:shbigchange2020@gmail.com">
                         <u>Here</u>.
                     </a>
-                    <br />R² &COPY; Dallas & Randy.
+                    <br />Dallas & Randy.
                 </p>
             </div>
         </div>
-
     </div>
     </div>
 </body>
+<style>
+    .checkbox-div {
+        text-align: left;
+    }
+
+    .checkbox-div .custom-control.custom-checkbox {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+</style>
 
 <!-- Dependencies for Javascript Events -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
 <!-- Dependencies for Javascript Events -->
 <script src="water-assets/scroll-overflow.min.js"></script>
@@ -298,8 +292,48 @@
         scrollOverflow: true,
         loopBottom: true,
         fitToSection: false,
-        sectionsColor: ['#bdedec', '#FFFFFF', '#51a7a8', '#FFFFFF'],
+        sectionsColor: ['#51a7a8', '#FFFAFB', '#51a7a8', '#FFFFFF', '#51a7a8', '#FFFFFF'],
     });
+
+    const checkBox = (int, text) => {
+        return `<div class="checkbox-div"><div class='custom-control custom-checkbox'><input value='${text}' type='checkbox' class='custom-control-input' id='cb_${int}'><label class='custom-control-label' for='cb_${int}'>${text}</label></div><div>`
+    }
+
+    const set1Questions = [
+        "Taking shorter showers of about 5 minutes. [save 9litres of water per minute]",
+        "Switch off the shower tap while shampooing or soaping your body. [save 9 litres of water per minute]",
+        "Use a dish of water to clean your shaver [save 6 litres of water per minute]",
+        "Use a mug while brushing your teeth. [save 50ml]",
+        "Use the half flush when there is only liquid waste. [save 3 litres]",
+        "Install thimbles or water- saving devices at taps with high flow rate. [get PUB's water saving kit!]"
+    ]
+
+    const set2Questions = [
+        "Use a filled sink or bucket of water to rinse your dirty dishes. [save 6 litres of water per minute]",
+        "Use the washing machine only with a full load. [save 53 litres to 94.6 litres per use]",
+        "Wash vegetables with a filled sink instead of a running tap. [save 6 litres of water per minute]",
+        "Don't thaw frozen food under running water. [save 6 litres of water per minute]",
+        "Water plants by using a watering can instead of a running hose. [save 22 litres of water per minute]",
+        "Reuse water used for washing dishes or washing rice to flush the toilet.",
+    ]
+
+    const createSet1CheckBoxes = () => {
+        let output = "<div class='px-5'>";
+        for (let i = 0; i < set1Questions.length; i++) {
+            output += checkBox(i, set1Questions[i]);
+        }
+        output += "</div>"
+        return output;
+    }
+
+    const createSet2CheckBoxes = () => {
+        let output = "<div class='px-5'>";
+        for (let i = 0; i < set2Questions.length; i++) {
+            output += checkBox(i + 6, set2Questions[i]);
+        }
+        output += "</div>"
+        return output;
+    }
 
     appendLeadingZeroes = (n) => {
         if (n <= 9) {
@@ -309,50 +343,168 @@
     }
 
     incrementPledges = () => {
-        if (bad_words.includes(document.getElementById("pledgerName").value)) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Invalid Input',
-                text: 'Please refrain from profanities!',
-                allowOutsideClick: false,
-            })
-        }
-        else {
-            countUp.update(pledgesCounter += 1);
-            Swal.fire({
-                icon: 'success',
-                title: 'Pledged',
-                text: 'Thanks for participating!',
-                allowOutsideClick: false,
-            }).then(() => Swal.close());
+        Swal.mixin({
+            input: 'text',
+            confirmButtonText: 'Next &rarr;',
+            showCancelButton: true,
+            progressSteps: ['1', '2', '3', '4']
+        }).queue([
+            {
+                title: 'Before we start,<br/>can we get your name?',
+                input: "",
+                html: `<div class="m-5"><input id="pledgerName" type="text" class="form-control rounded-0"
+                                            placeholder="Your name or blank for 'Anonymous'"
+                                            aria-label="Recipient's username" aria-describedby="button-addon2" required></div>`,
+                preConfirm: () => {
+                    let pledgerName = Swal.getPopup().querySelector('#pledgerName').value;
+                    return { pledgerName: pledgerName }
+                }
+            },
+            {
+                title: 'For my toilet and shower habits, I pledge to...',
+                text: 'choose as many as you like',
+                input: "",
+                html: createSet1CheckBoxes(),
+                preConfirm: () => {
+                    let cb_0 = Swal.getPopup().querySelector('#cb_0').checked;
+                    let cb_1 = Swal.getPopup().querySelector('#cb_1').checked;
+                    let cb_2 = Swal.getPopup().querySelector('#cb_2').checked;
+                    let cb_3 = Swal.getPopup().querySelector('#cb_3').checked;
+                    let cb_4 = Swal.getPopup().querySelector('#cb_4').checked;
+                    let cb_5 = Swal.getPopup().querySelector('#cb_5').checked;
+                    return { cb_0: cb_0, cb_1: cb_1, cb_2: cb_2, cb_3: cb_3, cb_4: cb_4, cb_5: cb_5 }
+                }
+            },
+            {
+                title: 'For my habits at home and in the kitchen, I pledge to...',
+                text: 'choose as many as you like',
+                input: "",
+                html: createSet2CheckBoxes(),
+                preConfirm: () => {
+                    let cb_6 = Swal.getPopup().querySelector('#cb_6').checked;
+                    let cb_7 = Swal.getPopup().querySelector('#cb_7').checked;
+                    let cb_8 = Swal.getPopup().querySelector('#cb_8').checked;
+                    let cb_9 = Swal.getPopup().querySelector('#cb_9').checked;
+                    let cb_10 = Swal.getPopup().querySelector('#cb_10').checked;
+                    let cb_11 = Swal.getPopup().querySelector('#cb_11').checked;
+                    return { cb_6: cb_6, cb_7: cb_7, cb_8: cb_8, cb_9: cb_9, cb_10: cb_10, cb_11: cb_11 }
+                }
+            }
+        ]).then((result) => {
+            newEntry = result;
+            if (result.value) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Thank you for pledging!',
+                    text: 'The smallest of steps counts towards making a huge impact'
+                });
+            }
+        }).then(() => {
             postToJsonBin();
-        }
+        })
+
     }
 
+    // if (bad_words.includes(document.getElementById("pledgerName").value)) {
+    //     Swal.fire({
+    //         icon: 'error',
+    //         title: 'Invalid Input',
+    //         text: 'Please refrain from profanities!',
+    //         allowOutsideClick: false,
+    //     })
+    // }
+    // else {
+    //     countUp.update(pledgesCounter += 1);
+    //     Swal.fire({
+    //         icon: 'success',
+    //         title: 'Pledged',
+    //         text: 'Thanks for participating!',
+    //         allowOutsideClick: false,
+    //     }).then(() => Swal.close());
+    // }
+
     insertColumns = () => {
-        let pledgeList = document.getElementById("pledges-list");
-        const images = ["river.png", "waterfall.png", "mountains.png"];
+        const questions = [
+            "Taking shorter showers of about 5 minutes. [save 9litres of water per minute]",
+            "Switch off the shower tap while shampooing or soaping your body. [save 9 litres of water per minute]",
+            "Use a dish of water to clean your shaver. [save 6 litres of water per minute]",
+            "Use a mug while brushing your teeth. [save 50ml]",
+            "Use the half flush when there is only liquid waste. [save 3 litres]",
+            "Install thimbles or water- saving devices at taps with high flow rate. [get PUB's water saving kit!]",
+            "Use a filled sink or bucket of water to rinse your dirty dishes. [save 6 litres of water per minute]",
+            "Use the washing machine only with a full load. [save 53 litres to 94.6 litres per use]",
+            "Wash vegetables with a filled sink instead of a running tap. [save 6 litres of water per minute]",
+            "Don't thaw frozen food under running water. [save 6 litres of water per minute]",
+            "Water plants by using a watering can instead of a running hose. [save 22 litres of water per minute]",
+            "Reuse water used for washing dishes or washing rice to flush the toilet.",
+        ]
 
-        createColumn = (name, date) => {
-            let index = [Math.floor(Math.random() * images.length)];
+        createIcon = (boolean, iconIndex) => {
+            if (!boolean) {
+                return "";
+            }
+            iconMeaning = questions[iconIndex - 1]
+            return `<span data-toggle="tooltip" data-placement="bottom" title="${iconMeaning}"><img src="water-assets/icons/question-${iconIndex}.png" class="card-icon" /></span>`;
 
-            return ("<div class='col-lg-4 col-md-12 col-sm-12 no-gutters justify-content-center pledge-card'><div class='media p-2'><img class='icon donor mr-4' src='water-assets/pledges-icons/" + images[index] + "' alt='icon' height='100'> <div class='media-body p-2 mb-0 border-bottom border-top border-gray w-100'><strong class='text-capitalize'>" + name + "</strong><span class='feed-datetime d-block text-muted small my-1'>" + date + "</span><span class='d-block medium mb-0'>Pledged to save water!</span></div></div></div>")
+        }
+
+        createColumn = (name, date, commitments) => {
+            return (`
+            <div class="flip-card m-2">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class='media-body p-3 mb-0 border border-gray text-truncate pledge-card shadow-sm'> <strong
+                            class='text-capitalize'>
+                            <h5>${name}</h5>
+                        </strong><span class='feed-datetime d-block text-muted small my-1'>${date}</span>
+                            <span class='d-block mb-0'>Pledged to save water!</span></div>
+                    </div>
+                    <div class="flip-card-back border border-gray shadow-sm">
+                        <div>
+                            ${createIcon(commitments[0], 1)}
+                            ${createIcon(commitments[1], 2)}
+                            ${createIcon(commitments[2], 3)}
+                            ${createIcon(commitments[3], 4)}
+                            ${createIcon(commitments[4], 5)}
+                            ${createIcon(commitments[5], 6)}
+                            ${createIcon(commitments[6], 7)}
+                            ${createIcon(commitments[7], 8)}
+                            ${createIcon(commitments[8], 9)}
+                            ${createIcon(commitments[9], 10)}
+                            ${createIcon(commitments[10], 11)}
+                            ${createIcon(commitments[11], 12)}
+                            ${createIcon(commitments[12], 13)}
+                        </div>
+                    </div>
+                </div>
+        </div >`)
         };
 
-        let top12Pledges = pledges.slice(-12).reverse()
+        let pledgeList = document.getElementById("pledges-list");
+
+        // insertColumns = () => {
+        //     pledges.map(pledge => (pledgeList.innerHTML += createColumn(pledge.pledgerName, pledge.date, pledge.commitments)));
+        // }
+
+        let top12Pledges = pledges.slice(-12).reverse();
+        // let top12Pledges = pledges;
         pledgeList.innerHTML = "";
-        top12Pledges.map(pledge => (pledgeList.innerHTML += createColumn(pledge.name, pledge.date)));
+        top12Pledges.map(pledge => (pledgeList.innerHTML += createColumn(pledge.pledgerName, pledge.date, pledge.commitments)));
     }
 
     // For Posting
     postToJsonBin = () => {
+        console.log(newEntry)
         let current_datetime = new Date()
         let formatted_date = current_datetime.getFullYear() + "-" + appendLeadingZeroes(current_datetime.getMonth() + 1) + "-" + appendLeadingZeroes(current_datetime.getDate()) + " " + appendLeadingZeroes(current_datetime.getHours()) + ":" + appendLeadingZeroes(current_datetime.getMinutes()) + ":" + appendLeadingZeroes(current_datetime.getSeconds())
-        let pledgerName = document.getElementById("pledgerName").value;
+        let pledgerName = newEntry["value"][0].pledgerName;
+        let commitments = [newEntry["value"][1].cb_0, newEntry["value"][1].cb_1, newEntry["value"][1].cb_2, newEntry["value"][1].cb_3, newEntry["value"][1].cb_4, newEntry["value"][1].cb_5, newEntry["value"][2].cb_6, newEntry["value"][2].cb_7, newEntry["value"][2].cb_8, newEntry["value"][2].cb_9, newEntry["value"][2].cb_10, newEntry["value"][2].cb_11, newEntry["value"][2].cb_12];
+
+        // commitments.map(newEntry["value"][2].)
 
         let req = new XMLHttpRequest();
 
-        if (document.getElementById('pledgerName').value === "") {
+        if (newEntry["value"][0].pledgerName === "") {
             pledgerName = "Anonymous"
         }
 
@@ -361,21 +513,24 @@
                 // Pass
             }
         };
-        req.open("PUT", "https://api.jsonbin.io/b/5e1f46035df640720835ed12", false);
+        req.open("PUT", "https://api.jsonbin.io/b/5e2a232d50a7fe418c52a0e9", false);
         req.setRequestHeader("Content-type", "application/json");
-        pledges.push({ "name": pledgerName, "date": formatted_date })
+        pledges.push({ "pledgerName": pledgerName, "date": formatted_date, "commitments": commitments });
+        // console.log(pledges)
         req.send(JSON.stringify(pledges));
         insertColumns();
     }
 
     let pledges = [];
     let pledgesCounter = 0;
+    let newEntry;
     const countUp = new CountUp(counter, 0, 0, 0, 0.6);
     const bad_words = badWords.words;
 
-    fetch("https://api.jsonbin.io/b/5e1f46035df640720835ed12/latest")
+    fetch("https://api.jsonbin.io/b/5e2a232d50a7fe418c52a0e9/latest")
         .then(res => res.json())
         .then(data => pledges = data)
+        .then(() => console.log(pledges))
         .then(() => insertColumns())
         .then(() => $('#landing-loading').hide())
         .then(() => pledgesCounter = pledges.length)

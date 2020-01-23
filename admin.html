@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="water-assets/logo.png" />
-
+    <link rel="stylesheet" href="flip.css" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Admin Panel</title>
     <style>
         body {
@@ -104,19 +105,73 @@
     let pledges = [];
     let savedStateEditorData;
     let editorData;
+    goToTopBtn = document.getElementById("goToTopBtn");
 
-    createColumn = (name, date) => {
-        return ("<div class='col-lg-4 col-md-12 col-sm-12 text-center'><div class='media p-2'><div class='media-body p-3 mb-0 border border-gray text-truncate pledge-card shadow-sm'> <strong class='text-capitalize'><h5>" + name + "</h5></strong><span class='feed-datetime d-block text-muted small my-1'>" + date + "</span><span class='d-block mb-0'>Pledged to save water!</span></div></div></div>")
+    const questions = [
+        "Taking shorter showers of about 5 minutes. [save 9litres of water per minute]",
+        "Switch off the shower tap while shampooing or soaping your body. [save 9 litres of water per minute]",
+        "Use a dish of water to clean your shaver. [save 6 litres of water per minute]",
+        "Use a mug while brushing your teeth. [save 50ml]",
+        "Use the half flush when there is only liquid waste. [save 3 litres]",
+        "Install thimbles or water- saving devices at taps with high flow rate. [get PUB's water saving kit!]",
+        "Use a filled sink or bucket of water to rinse your dirty dishes. [save 6 litres of water per minute]",
+        "Use the washing machine only with a full load. [save 53 litres to 94.6 litres per use]",
+        "Wash vegetables with a filled sink instead of a running tap. [save 6 litres of water per minute]",
+        "Don't thaw frozen food under running water. [save 6 litres of water per minute]",
+        "Water plants by using a watering can instead of a running hose. [save 22 litres of water per minute]",
+        "Reuse water used for washing dishes or washing rice to flush the toilet.",
+    ]
+
+    createIcon = (boolean, iconIndex) => {
+        if (!boolean) {
+            return "";
+        }
+        iconMeaning = questions[iconIndex - 1]
+        return `<span data-toggle="tooltip" data-placement="bottom" title="${iconMeaning}"><img src="water-assets/icons/question-${iconIndex}.png" class="card-icon" /></span>`;
+
+    }
+
+    createColumn = (name, date, commitments) => {
+        return (`
+            <div class="col-md-4">
+                <div class="flip-card m-2">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class='media-body p-3 mb-0 border border-gray text-truncate pledge-card shadow-sm'> <strong
+                                class='text-capitalize'>
+                                <h5>${name}</h5>
+                            </strong><span class='feed-datetime d-block text-muted small my-1'>${date}</span>
+                                <span class='d-block mb-0'>Pledged to save water!</span></div>
+                        </div>
+                        <div class="flip-card-back border border-gray shadow-sm">
+                            <div>
+                                ${createIcon(commitments[0], 1)}
+                                ${createIcon(commitments[1], 2)}
+                                ${createIcon(commitments[2], 3)}
+                                ${createIcon(commitments[3], 4)}
+                                ${createIcon(commitments[4], 5)}
+                                ${createIcon(commitments[5], 6)}
+                                ${createIcon(commitments[6], 7)}
+                                ${createIcon(commitments[7], 8)}
+                                ${createIcon(commitments[8], 9)}
+                                ${createIcon(commitments[9], 10)}
+                                ${createIcon(commitments[10], 11)}
+                                ${createIcon(commitments[11], 12)}
+                                ${createIcon(commitments[12], 13)}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`)
     };
 
     insertColumns = () => {
-        pledgeList.innerHTML = "";
-        pledges.map(pledge => (pledgeList.innerHTML += createColumn(pledge.name, pledge.date)));
+        pledges.map(pledge => (pledgeList.innerHTML += createColumn(pledge.pledgerName, pledge.date, pledge.commitments)));
     }
 
 
     loadPledges = () => {
-        fetch("https://api.jsonbin.io/b/5e1f46035df640720835ed12/latest")
+        fetch("https://api.jsonbin.io/b/5e2a232d50a7fe418c52a0e9/latest")
             .then(res => res.json())
             .then(data => pledges = data.reverse())
             .then(() => savedStateEditorData = pledges)
@@ -154,7 +209,7 @@
                 // Pass
             }
         };
-        req.open("PUT", "https://api.jsonbin.io/b/5e1f46035df640720835ed12", false);
+        req.open("PUT", "https://api.jsonbin.io/b/5e2a232d50a7fe418c52a0e9", false);
         req.setRequestHeader("Content-type", "application/json");
         req.send(JSON.stringify(pledges.reverse()));
         insertColumns();

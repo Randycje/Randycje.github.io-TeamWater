@@ -2,6 +2,10 @@
   font-family: Montserrat, sans-serif;
 }
 
+.fs-18 {
+  font-size: 18px;
+}
+
 .table-display {
   display: table;
   width: 100%;
@@ -15,7 +19,29 @@
 
 #introduction {
   /* background-color: #51a7a8; */
-  background-color: #bdedec;
+  /* background-color: #bdedec; */
+  background-color: #f0f0e6;
+}
+
+#intro-image {
+  position: absolute;
+  top: 282px;
+  right: 200px;
+  z-index: 4;
+  width: 300px;
+}
+
+.btn.btn-dark {
+  width: 250px;
+  border-radius: 25px !important;
+}
+
+.pledges-border {
+  /* border: 4px solid #343a40; */
+  padding: 10% 5% 5% 5%;
+  /* text-align: center; */
+  border-radius: 10px;
+  margin: 0 50px;
 }
 
 #counter {
@@ -40,19 +66,17 @@
 .pledge-button {
   margin-top: 100px;
 }
-#pledge-title{
-
-}
+#pledge-title,
 #pledges-list {
   margin-top: 50px !important;
 }
-.a:hover {
-  color: white !important;
+a:hover {
+  color: #273654 !important;
   text-decoration: none;
 }
 
 .bg-blue {
-  background-color: #51a7a8;
+  background-color: #bdedec;
 }
 .bg-grey {
   background-color: #ececec;
@@ -62,10 +86,10 @@ a:link {
 }
 
 .footer-link {
-  color: white !important;
+  color: black !important;
 }
 .footer-link:hover {
-  color: #black !important;
+  color: #51a7a8 !important;
   font-weight: 400;
 }
 
@@ -129,6 +153,25 @@ a:link {
   max-width: 700px;
 }
 
+#who-is-firm {
+  position: absolute;
+  /* height: 650px; */
+  object-fit: cover;
+  top: -36px;
+  right: 200px;
+  margin-top: 150px;
+  margin-left: 100px;
+}
+
+#who-is-firm-content {
+  margin-left: 20%;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(100%);
+}
+
 @media (max-width: 1024px) {
   #intro-gif {
     display: none;
@@ -157,6 +200,14 @@ a:link {
       flex-flow: column;
     }
 
+    #intro-image {
+      display: none;
+    }
+
+    .pledges-border {
+      text-align: center;
+    }
+
     #counter {
       margin: 0 auto;
     }
@@ -178,11 +229,37 @@ a:link {
     #goToTopBtn {
       right: 45px;
     }
+
+    #who-is-firm-content {
+      min-height: 100vh;
+      padding: 10% 0 30%;
+    }
+
+    #who-is-firm-content.table-child {
+      height: 100vh !important;
+    }
+
+    #who-is-firm {
+      display: block;
+      top: 200px;
+      z-index: 9;
+      right: 200px !important;
+      width: 300px;
+      height: 300px;
+      object-fit: contain !important;
+    }
+
+    .carousel-container .fp-tableCell {
+      padding: 10% 15%;
+      height: auto !important;
+    }
+
+    .who-we-are-container {
+      padding: 10% 15%;
+    }
+
+    #who-we-are-firm {
+      display: none;
+    }
   }
-}
-.carousel { 
-    width:100%; 
-    height:auto;
-    padding-top: 0px !Important;
-    margin-left: 0px !important;
 }
