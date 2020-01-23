@@ -22,54 +22,62 @@
 
     <style>
         @media (max-width: 1024px) {
-            #pledges-list>div:nth-child(n + 7) {
+            #pledges-list > div:nth-child(n + 7) {
                 display: none;
             }
 
             @media (max-width: 768px) {
-                #pledges-list>div:nth-child(n + 6) {
+                #pledges-list > div:nth-child(n + 6) {
                     display: none;
                 }
             }
         }
     </style>
-    <title>#Save4TheFutureNow</title>
+    <title>#SmallHabitsBigChange</title>
 </head>
 
 
 <body>
     <div id="fullpage">
         <div class="section">
-            <div id="sintroduction" class="row no-gutters justify-content-center">
+            <div id="introduction" class="row no-gutters justify-content-center">
                 <div id="intro-gif" class="col-md-4">
                     <div class="table-display">
                         <div class="table-child">
-                            <img src="water-assets/intro.gif" class="w-100"
-                                style="max-height: 900px; object-fit: contain;">
+                            <img src="water-assets/firm-wave.png" class="w-100"
+                                 style="height: 500px; object-fit: contain;">
                         </div>
                     </div>
                 </div>
-                <div class=" col-lg-4 col-md-12">
+                <div class="col-lg-4 col-md-12">
                     <div class="table-display">
                         <div class="table-child">
                             <div class="p-3">
                                 <div id="counter-container"
-                                    class="d-flex justify-content-lg-start justify-content-md-center">
+                                     class="d-flex justify-content-lg-start justify-content-md-center">
                                     <h1 id="counter"></h1>
                                     <p class="counter-subtitle" style="line-height: 61px;">pledges</p>
                                 </div>
                                 <div class="mt-1">
-                                    <p class="tagline font-weight-bold" style="font-size: 1rem;">
-                                        Waste Water Today, Live In Desert Tomorrow
+                                    <p class="tagline font-weight-bold" style="font-size: 1.2rem; margin-bottom:0%;">
+                                        #StayFirm
                                     </p>
-                                    <p class="counter-subtitle mt-5">I will pledge too!</p>
+                                    <p class="tagline font-weight-bold" style="font-size: 1rem;">
+                                        Small Habits, Big Change
+                                    </p>
+                                    <!--<p class="tagline font-weight-bold" style="font-size: 0.95rem;">
+                                        Take Action, Make a Difference, Save Water.
+                                    </p>-->
+                                    <p class="counter-subtitle mt-2">I will pledge too!</p>
 
                                     <div class="input-group mb-3 px-sm-5 px-lg-0">
                                         <input id="pledgerName" type="text" class="form-control rounded-0"
-                                            placeholder="Your name or blank for 'Anonymous'"
-                                            aria-label="Recipient's username" aria-describedby="button-addon2" required>
+                                               placeholder="Your name or blank for 'Anonymous'"
+                                               aria-label="Recipient's username" aria-describedby="button-addon2" required>
                                         <button class="btn btn-dark rounded-0" type="button"
-                                            onclick="incrementPledges()">Pledge!</button>
+                                                onclick="incrementPledges()">
+                                            Pledge!
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -93,12 +101,16 @@
                 </div>
                 <div id="pledges-list" class="row no-gutters justify-content-center">
                 </div>
-                <div class="text-center text-dark my-4"><a href="/pledges">Click here to view all
-                        pledges</a></div>
+                <div class="text-center text-dark my-4">
+                    <a href="/pledges">
+                        Click here to view all
+                        pledges
+                    </a>
+                </div>
             </div>
         </div>
 
-        <!-- <div class="section">
+        <!--<div class="section">
             <div id="product-container" class="row no-gutters justify-content-center"
                 style="background-color: #ececec;">
                 <div class="col-md-4 col-sm-12">
@@ -119,43 +131,57 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>-->
 
         <div class="section">
             <div class="row no-gutters justify-content-center bg-blue">
                 <div class="col-lg-5 col-md-12">
                     <div class="table-display w-100">
                         <div class="table-child text-center">
-                            <h1 class="mt-3 text-white" id="connect-with-us">Connect with us!</h1>
+                            <!--<h1 class="mt-3 text-white" id="connect-with-us">Connect with us!</h1>
                             <div style="margin-bottom:5%;">
-                                <a href="https://www.instagram.com/save4thefuturenow/" target="_blank"
+                                <a href="https://www.instagram.com/stay.firm/?hl=en" target="_blank"
                                     class="text-white a-link ">Instagram</a>
-                                · <a href="https://www.facebook.com/save4thefuture/" target="_blank"
+                                · <a href="https://www.facebook.com/" target="_blank"
                                     class="text-white a-link ">Facebook</a>
-                                · <a href="https://www.youtube.com/channel/UCgkcODnS8M2X74vnUl3E1fQ" target="_blank"
+                                · <a href="https://www.youtube.com/" target="_blank"
                                     class="text-white a-link ">YouTube</a>
-                            </div>
+                            </div>-->
 
                             <div class="row no-gutters justify-content-md-center mt-3 p-3">
                                 <!-- <div id="instagram-container" class="col-md-5 mb-4">
                                     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
                                     <div style="width: 340px" class="elfsight-app-88510386-0611-4bf9-8d7c-6ebbaa1abf06">
-                                    </div>
-                                </div> -->
+                                    </div> -->
+                            </div>
 
-                                <div class="col-md-12">
-                                    <div id="fb-root"></div>
-                                    <script async defer crossorigin="anonymous"
+                            <div class="col-md-12">
+                                <div id="fb-root"></div>
+                                <script async defer crossorigin="anonymous"
                                         src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v5.0&appId=473213440257555&autoLogAppEvents=1"></script>
-                                    <div class="fb-page" data-href="https://www.facebook.com/save4thefuture/"
-                                        data-tabs="timeline" data-width="450" data-height="" data-small-header="false"
-                                        data-adapt-container-width="true" data-hide-cover="false"
-                                        data-show-facepile="true">
-                                        <blockquote cite="https://www.facebook.com/save4thefuture/"
-                                            class="fb-xfbml-parse-ignore"><a
-                                                href="https://www.facebook.com/save4thefuture/">Save4TheFuture</a>
-                                        </blockquote>
-                                    </div>
+                                <div class="fb-page" data-href="https://www.facebook.com/save4thefuture/"
+                                     data-tabs="timeline" data-width="450" data-height="" data-small-header="false"
+                                     data-adapt-container-width="true" data-hide-cover="false"
+                                     data-show-facepile="true">
+                                    <!--<blockquote cite="https://www.facebook.com/save4thefuture/"
+                                        class="fb-xfbml-parse-ignore"><a
+                                            href="https://www.facebook.com/save4thefuture/">Save4TheFuture</a>
+                                    </blockquote> -->
+                                    <h1 class="text-white mb-3">Who is Firm?</h1>
+                                    <p class="text-white" style="font-size:0.9rem;">
+                                        This is Firm. He is an ignorant 18 year old who unknowingly portrays bad water wasting habits.
+                                        He does not turn off the tap while brushing his teeth or while shampooing his hair.
+
+                                    <p class="text-white" style="font-size:0.9rem;">
+                                        Furthermore, Firm does not believe that making small changes in his daily life to conserve
+                                        water will lead to any significant impact for water-conservation in Singapore.
+                                    </p>
+
+                                    <p class="text-white" style="font-size:0.9rem;">
+                                        Join Firm on this journey to make changes in his habits by following our Instagram page
+                                        <a href="https://www.instagram.com/smallhabits.bigchange/" target="_blank" class="text-white a-link "><u>here!</u></a>
+                                    </p>
+                                    <img src="water-assets/firm-gotchu.png" height="300" />
                                 </div>
                             </div>
                         </div>
@@ -166,46 +192,95 @@
 
         <div class="section">
             <div class="row no-gutters justify-content-center">
-                <div class="col-lg-5 col-md-8 col-sm-10 text-center p-3">
-                    <h1>About Us</h1>
-                    <p class="mt-3">
-                        We are a group of students from NYP and trying to spread awareness
-                        to people about
-                        water conservation in hopes for them to motivate them to save water.
-                        Join us in our
-                        campaign and pledge with us to save water!
-                    </p>
-
-                    <div class="mt-4">
-                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/BI2Q7X4kYxU"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                <h1 class="mt-5">Did you know?</h1>
+                <div id="carouselExampleControls" class="carousel slide carousel" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block justify-content-center" src="water-assets/washing-machine.jpeg" alt="Washing Machine">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block" src="water-assets/soaping-hand.jpeg" alt="Soaping Hand">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block" src="water-assets/shower.jpeg" alt="Shower">
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-12 text-center mt-5">
-                    <p style="font-size: 12px">Copyright &COPY; Save4TheFuture. Contact Us<a class="footer-link"
-                            href="mailto:save4thefuture00@gmail.com">
-                            <u>Here</u>.</a>
-                        <br />R² &COPY; Rx and Rez.
-                    </p>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next " href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
-
         </div>
+
+        <div class="section bg-blue">
+            <div class="row no-gutters justify-content-center">
+                <h1 class="text-white">Keep Up to Date With Us!</h1>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="row no-gutters justify-content-center">
+                <div class="col-lg-5 col-md-8 col-sm-10 text-center p-3">
+                    <div class="container">
+                        <h1 class="text-center">Who Are We?</h1>
+                        <div class="row mt-4">
+                            <div class="col-md-6" height="50%">
+                                <h4 class="text-center">About Us</h4>
+                                <p>
+                                    Hey everyone! We are a group of students from Nanyang Polytechnic.
+                                    We started this social movement campaign "Small Habits, Big Change" because the majority of youths in Singapore are unaware
+                                    that the smallest of actions leads to water wastage.
+                                </p>
+                            </div>
+                            <div class="col-md-6" height="50%">
+                                <h4 class="text-center">Campaign Objectives</h4>
+                                <p>
+                                    The objectives of our campaign are to change youth's attitudes and beliefs towards saving water by getting them to be more
+                                    responsible by continuing to take steps to save water even after the completion of the campaign.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="mt-4">
+                        <!--<iframe width="100%" height="400" src="https://www.youtube.com/embed/BI2Q7X4kYxU"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 text-center mt-5">
+                <p style="font-size: 12px">
+                    Copyright &COPY; SmallHabitsBigChange. Contact Us<a class="footer-link text-white"
+                                                                        href="mailto:shbigchange2020@gmail.com">
+                        <u>Here</u>.
+                    </a>
+                    <br />R² &COPY; Dallas & Randy.
+                </p>
+            </div>
+        </div>
+
+    </div>
     </div>
 </body>
 
 <!-- Dependencies for Javascript Events -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
 <!-- Dependencies for Javascript Events -->
 <script src="water-assets/scroll-overflow.min.js"></script>

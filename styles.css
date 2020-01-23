@@ -40,12 +40,14 @@
 .pledge-button {
   margin-top: 100px;
 }
-#pledge-title,
+#pledge-title{
+
+}
 #pledges-list {
   margin-top: 50px !important;
 }
-a:hover {
-  color: #273654 !important;
+.a:hover {
+  color: white !important;
   text-decoration: none;
 }
 
@@ -60,10 +62,10 @@ a:link {
 }
 
 .footer-link {
-  color: black !important;
+  color: white !important;
 }
 .footer-link:hover {
-  color: #51a7a8 !important;
+  color: #black !important;
   font-weight: 400;
 }
 
@@ -177,4 +179,10 @@ a:link {
       right: 45px;
     }
   }
+}
+.carousel { 
+    width:100%; 
+    height:auto;
+    padding-top: 0px !Important;
+    margin-left: 0px !important;
 }
