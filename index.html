@@ -392,6 +392,8 @@
                     icon: 'success',
                     title: 'Thank you for pledging!',
                     text: 'The smallest of steps counts towards making a huge impact'
+                }).then(() => {
+                    countUp.update(pledgesCounter += 1);
                 });
             }
         }).then(() => {
