@@ -104,7 +104,7 @@
 
 
         <div class="section">
-            <div class="row no-gutters justify-content-lg-center justify-content-md-center bg-blue h-100">
+            <div class="row no-gutters justify-content-lg-center justify-content-md-center bg-blue">
                 <div class="col-lg-6 col-md-10 fs-18">
                     <div id="who-is-firm-content" class="text-center text-dark px-4">
                         <div class="d-flex">
@@ -289,7 +289,7 @@
         scrollOverflow: true,
         loopBottom: true,
         fitToSection: false,
-        sectionsColor: ['#f0f0e6', 'rgb(255, 250, 251)', '#51a7a8', '#FFFFFF', '#51a7a8', '#FFFFFF'],
+        sectionsColor: ['#f0f0e6', 'rgb(255, 250, 251)', '#bdedec', '#FFFFFF', '#51a7a8', '#FFFFFF'],
     });
 
     const checkBox = (int, text) => {
@@ -532,15 +532,15 @@
     const countUp = new CountUp(counter, 0, 0, 0, 0.6);
     const bad_words = badWords.words;
 
-    // fetch("https://api.jsonbin.io/b/5e2a232d50a7fe418c52a0e9/latest")
-    //     .then(res => res.json())
-    //     .then(data => pledges = data)
-    //     .then(() => console.log(pledges))
-    //     .then(() => insertColumns())
-    //     .then(() => $('#landing-loading').hide())
-    //     .then(() => pledgesCounter = pledges.length)
-    //     .then(() => startCount())
-    //     .catch((err) => console.log(err));
+    fetch("https://api.jsonbin.io/b/5e2a232d50a7fe418c52a0e9/latest")
+        .then(res => res.json())
+        .then(data => pledges = data)
+        .then(() => console.log(pledges))
+        .then(() => insertColumns())
+        .then(() => $('#landing-loading').hide())
+        .then(() => pledgesCounter = pledges.length)
+        .then(() => startCount())
+        .catch((err) => console.log(err));
 
 
     startCount = () => {
