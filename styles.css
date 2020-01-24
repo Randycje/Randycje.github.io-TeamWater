@@ -212,6 +212,13 @@ a:link {
     font-size: 14px;
   }
 
+  .swal2-header .h2 {
+    font-size: 16px !important;
+  }
+  .swal2-actions {
+    margin-top: 10px;
+  }
+
   .tagline.font-weight-bold,
   .counter-subtitle {
     text-align: center;
@@ -291,12 +298,6 @@ a:link {
     }
     #goToTopBtn {
       right: 45px;
-    }
-    .swal2-title {
-      font-size: 16px;
-    }
-    .swal2-actions {
-      margin-top: 10px;
     }
   }
 }
