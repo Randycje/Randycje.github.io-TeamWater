@@ -156,16 +156,16 @@ a:link {
 
 #who-is-firm {
   position: absolute;
-  /* height: 650px; */
+  height: 650px;
   object-fit: cover;
   top: -20px;
-  right: -600px;
+  right: -300px;
   margin-top: 150px;
   margin-left: 100px;
 }
 
-#who-is-firm-content {
-  margin-left: 20%;
+#who-is-firm-content .d-flex {
+  margin-right: 30%;
 }
 
 .carousel-control-next,
@@ -191,6 +191,10 @@ a:link {
 }
 
 @media (max-width: 1024px) {
+  #who-is-firm-content .d-flex {
+    margin-right: 0%;
+  }
+
   #intro-gif {
     display: none;
   }
