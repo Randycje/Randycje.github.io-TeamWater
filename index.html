@@ -501,7 +501,7 @@
 
         let req = new XMLHttpRequest();
 
-        if (newEntry["value"][0].pledgerName === "") {
+        if (newEntry["value"][0].pledgerName === "" || newEntry["value"][0].pledgerName.length === 0) {
             pledgerName = "Anonymous"
         }
 
