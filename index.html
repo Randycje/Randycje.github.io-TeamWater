@@ -23,12 +23,12 @@
 
     <style>
         @media (max-width: 1024px) {
-            #pledges-list>div:nth-child(n + 4) {
+            #pledges-list>div:nth-child(n + 5) {
                 display: none;
             }
 
             @media (max-width: 768px) {
-                #pledges-list>div:nth-child(n + 5) {
+                #pledges-list>div:nth-child(n + 6) {
                     display: none;
                 }
             }
@@ -104,8 +104,8 @@
 
 
         <div class="section">
-            <div class="row no-gutters justify-content-lg-center justify-content-md-center bg-blue h-100">
-                <div class="col-lg-6 col-md-10 fs-18">
+            <div class="row no-gutters justify-content-lg-center justify-content-md-center bg-blue">
+                <div class="col-lg-4 col-md-10 fs-18">
                     <div id="who-is-firm-content" class="text-center text-dark px-4">
                         <div>
                             <h1 class="mb-3" style="font-size: 50px;">Who is Firm?</h1>
@@ -128,8 +128,10 @@
                                     target="_blank"><u>here!</u></a>
                             </p>
                         </div>
-                        <img id="who-is-firm" src="water-assets/firm/firm-wave.png" class="img-fluid" />
                     </div>
+                </div>
+                <div class="col-lg-4">
+                    <img id="who-is-firm" src="water-assets/firm/firm-wave.png" class="img-fluid" />
                 </div>
             </div>
         </div>
@@ -286,7 +288,7 @@
     });
 
     const checkBox = (int, text) => {
-        return `<div class="checkbox-div"><div class='custom-control custom-checkbox'><input value='${text}' type='checkbox' class='custom-control-input' id='cb_${int}'><label class='custom-control-label' for='cb_${int}'>${text}</label></div><div>`
+        return `<div class="checkbox-div"><div class='custom-control custom-checkbox'><input value='${text}' type='checkbox' class='custom-control-input' id='cb_${int}'><label class='custom-control-label' for='cb_${int}'>${text}</label></div></div>`
     }
 
     const set1Questions = [
@@ -308,7 +310,7 @@
     ]
 
     const createSet1CheckBoxes = () => {
-        let output = "<div class='px-3'>";
+        let output = "<div class='px-2'>";
         for (let i = 0; i < set1Questions.length; i++) {
             output += checkBox(i, set1Questions[i]);
         }
@@ -317,7 +319,7 @@
     }
 
     const createSet2CheckBoxes = () => {
-        let output = "<div class='px-3'>";
+        let output = "<div class='px-2'>";
         for (let i = 0; i < set2Questions.length; i++) {
             output += checkBox(i + 6, set2Questions[i]);
         }
@@ -368,7 +370,7 @@
                 }
             },
             {
-                title: 'For my habits at home and in the kitchen, I pledge to...',
+                title: 'For my habits at home and kitchen, I pledge to...',
                 text: 'choose as many as you like',
                 input: "",
                 allowOutsideClick: false,

@@ -155,13 +155,13 @@ a:link {
 }
 
 #who-is-firm {
-  position: absolute;
-  height: 650px;
+  /* position: absolute; */
+  /* height: 650px; */
   object-fit: cover;
-  top: -20px;
-  right: -300px;
-  margin-top: 150px;
-  margin-left: 100px;
+  /* top: -20px; */
+  /* right: -300px; */
+  /* margin-top: 150px; */
+  /* margin-left: 100px; */
 }
 
 #who-is-firm-content .d-flex {
@@ -191,12 +191,20 @@ a:link {
 }
 
 .swal2-title {
-  font-size: 20px !important;
+  font-size: 18px !important;
 }
 .swal2-actions {
-  margin-top: 10px !important;
+  margin-top: 0px !important;
+}
+#swal2-content > div > div:nth-child(6) > div {
+  margin-bottom: 5px;
 }
 
+.swal2-progress-steps {
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0 0 1rem;
+}
 @media (max-width: 1024px) {
   #who-is-firm-content .d-flex {
     margin-right: 0%;
