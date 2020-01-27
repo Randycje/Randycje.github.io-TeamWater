@@ -281,7 +281,7 @@
         scrollOverflow: true,
         loopBottom: true,
         fitToSection: false,
-        normalScrollElements: '#eapps-instagram-feed-popup-1, .swal2-container',
+        normalScrollElements: '#eapps-instagram-feed-popup-1, .swal2-container, #swal2-content',
         sectionsColor: ['#f0f0e6', 'rgb(255, 250, 251)', '#bdedec', '#FFFFFF', '#51a7a8', '#FFFFFF'],
     });
 
@@ -308,7 +308,7 @@
     ]
 
     const createSet1CheckBoxes = () => {
-        let output = "<div class='px-2'>";
+        let output = "<div class='px-2' style='overflow: auto'>";
         for (let i = 0; i < set1Questions.length; i++) {
             output += checkBox(i, set1Questions[i]);
         }
@@ -317,7 +317,7 @@
     }
 
     const createSet2CheckBoxes = () => {
-        let output = "<div class='px-2'>";
+        let output = "<div class='px-2' style='overflow: auto'>";
         for (let i = 0; i < set2Questions.length; i++) {
             output += checkBox(i + 6, set2Questions[i]);
         }
