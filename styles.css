@@ -111,7 +111,7 @@ a:link {
 }
 
 .ball-pulse > div {
-  background-color: #51a7a8 !important;
+  background-color: #000000 !important;
 }
 
 #loading {
@@ -128,7 +128,7 @@ a:link {
 
 #loading-image {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

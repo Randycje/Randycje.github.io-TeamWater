@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="water-assets/fullpage.min.css" />
     <link rel="stylesheet" href="water-assets/loaders.min.css" />
     <link rel="icon" type="image/png" href="water-assets/logo.png" />
-    <title>#Save4TheFutureNow</title>
+    <title>#SmallHabitsBigChange</title>
     <style>
         ::-webkit-scrollbar {
             display: none;
@@ -36,7 +36,7 @@
     <div class="p-3" style="min-height: 100vh; position: relative; z-index: 2; background-color: #51a7a8;">
         <img src="water-assets/up-arrow.png" onclick="topFunction()" id="goToTopBtn" />
 
-        <h1 class="text-center text-white mt-5">Our Pledges</h1>
+        <h1 class="text-center text-white mt-5">Our most recent 100 Pledges</h1>
         <p class="text-center text-white">Thank you all for participating in this journey!</p>
         <div id="loading" class="loader">
             <div id="loading-image" class="ball-pulse">
@@ -164,10 +164,13 @@
 
 
     fetch("https://api.jsonbin.io/b/5e2a232d50a7fe418c52a0e9/latest")
+        // fetch("http://127.0.0.1:5500/mockdata.json")
         .then(res => res.json())
-        .then(data => pledges = data.reverse())
+        .then(data => pledges = data.reverse().slice(0, 102))
         .then(() => insertColumns())
         .then(() => $('#loading').hide())
+        .catch((err) => console.log(err));
+
 </script>
 
 </html>
