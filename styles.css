@@ -214,7 +214,7 @@ a:link {
   #intro-image {
     display: none;
   }
-  
+
   @media (max-width: 990px) {
     .eapps-instagram-feed-title {
       font-size: 20px;
@@ -229,8 +229,6 @@ a:link {
     #intro-gif {
       display: none;
     }
-
-   
 
     #did-you-know {
       margin-top: 30px;
@@ -302,6 +300,10 @@ a:link {
 
       #intro-image {
         display: none;
+      }
+
+      #counter-container {
+        margin: 0 auto;
       }
 
       #counter {
