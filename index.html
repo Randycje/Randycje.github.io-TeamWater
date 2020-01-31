@@ -530,12 +530,11 @@
     fetch("https://api.jsonbin.io/b/5e2a232d50a7fe418c52a0e9/latest")
         .then(res => res.json())
         .then(data => pledges = data)
-        .then(() => console.log(pledges))
+        // .then(() => console.log(pledges))
         .then(() => insertColumns())
         .then(() => $('#landing-loading').hide())
         .then(() => pledgesCounter = pledges.length)
         .then(() => startCount())
-        .catch((err) => console.log(err));
 
 
     startCount = () => {

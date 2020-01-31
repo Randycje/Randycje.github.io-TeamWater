@@ -211,116 +211,120 @@ a:link {
 }
 
 @media (max-width: 1024px) {
-  .eapps-instagram-feed-title {
-    font-size: 20px;
-    line-height: 25px;
-    padding: 10px 0;
-  }
-
-  #who-is-firm-content .d-flex {
-    margin-right: 0%;
-  }
-
-  #intro-gif {
-    display: none;
-  }
-
   #intro-image {
     display: none;
   }
+  
+  @media (max-width: 990px) {
+    .eapps-instagram-feed-title {
+      font-size: 20px;
+      line-height: 25px;
+      padding: 10px 0;
+    }
 
-  #did-you-know {
-    margin-top: 30px;
-  }
+    #who-is-firm-content .d-flex {
+      margin-right: 0%;
+    }
 
-  .checkbox-div .custom-control.custom-checkbox {
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
+    #intro-gif {
+      display: none;
+    }
 
-  .tagline.font-weight-bold,
-  .counter-subtitle {
-    text-align: center;
-  }
-  #product-container {
-    height: 100%;
-    text-align: center;
-  }
-  #product-img {
-    max-height: 500px;
-    width: 100%;
-    object-fit: contain;
-  }
-  #product-tag .table-child {
-    height: 20%;
-  }
+   
 
-  /* #who-is-firm-content {
+    #did-you-know {
+      margin-top: 30px;
+    }
+
+    .checkbox-div .custom-control.custom-checkbox {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .tagline.font-weight-bold,
+    .counter-subtitle {
+      text-align: center;
+    }
+    #product-container {
+      height: 100%;
+      text-align: center;
+    }
+    #product-img {
+      max-height: 500px;
+      width: 100%;
+      object-fit: contain;
+    }
+    #product-tag .table-child {
+      height: 20%;
+    }
+
+    /* #who-is-firm-content {
     min-height: 100vh;
     padding: 10% 0 30%; 
   } */
 
-  #who-is-firm-content.table-child {
-    height: 100vh !important;
-  }
+    #who-is-firm-content.table-child {
+      height: 100vh !important;
+    }
 
-  #who-is-firm {
-    display: none;
-    top: 200px;
-    z-index: 9;
-    right: 200px !important;
-    /* width: 300px;
+    #who-is-firm {
+      display: none;
+      top: 200px;
+      z-index: 9;
+      right: 200px !important;
+      /* width: 300px;
     height: 300px; */
-    object-fit: contain !important;
-  }
-
-  .who-we-are-container {
-    padding: 10% 15%;
-  }
-
-  #who-we-are-firm {
-    display: none;
-  }
-
-  .pledges-border {
-    text-align: center;
-    padding: 5% 5% 5% 5%;
-  }
-
-  @media (max-width: 768px) {
-    #instagram-widget {
-      padding: 0 45px;
+      object-fit: contain !important;
     }
 
-    #counter-container {
+    .who-we-are-container {
+      padding: 10% 15%;
+    }
+
+    #who-we-are-firm {
+      display: none;
+    }
+
+    .pledges-border {
       text-align: center;
-      flex-flow: column;
+      padding: 5% 5% 5% 5%;
     }
 
-    #intro-image {
-      display: none;
-    }
+    @media (max-width: 768px) {
+      #instagram-widget {
+        padding: 0 45px;
+      }
 
-    #counter {
-      margin: 0 auto;
-    }
+      #counter-container {
+        text-align: center;
+        flex-flow: column;
+      }
 
-    #pledge-title,
-    #pledges-list {
-      margin-top: 0px !important;
-    }
-    h1 {
-      font-size: 2rem;
-    }
+      #intro-image {
+        display: none;
+      }
 
-    p {
-      font-size: 1rem;
-    }
-    #instagram-container {
-      display: none;
-    }
-    #goToTopBtn {
-      right: 45px;
+      #counter {
+        margin: 0 auto;
+      }
+
+      #pledge-title,
+      #pledges-list {
+        margin-top: 0px !important;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+      #instagram-container {
+        display: none;
+      }
+      #goToTopBtn {
+        right: 45px;
+      }
     }
   }
 }
